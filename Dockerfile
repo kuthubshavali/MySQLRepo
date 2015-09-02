@@ -1,7 +1,7 @@
 FROM centos:latest
 MAINTAINER Syed Mohammed
 RUN yum -y update
-RUN sudo yum install -y mysql-server
+RUN yum install -y mysql-server
 RUN GRANT ALL PRIVILEGES ON *.* TO 'monty'@'localhost' IDENTIFIED BY 'monty' WITH GRANT OPTION;
 RUN yum install -y python-dev libmysqlclient-dev
 RUN yum install -y python3.4
