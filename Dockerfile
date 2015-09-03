@@ -3,7 +3,7 @@ MAINTAINER Syed Mohammed
 RUN yum -y update
 RUN yum -y install mysql-server mysql pwgen supervisor bash-completion psmisc net-tools; yum clean all
 RUN yum install -y MySQL-python
-RUN /usr/sbin/mysqld & \
+RUN mysql & \
     sleep 10s &&\
     echo "CREATE USER 'monty'@'localhost' IDENTIFIED BY 'monty'"| mysql
 RUN yum install -y git
