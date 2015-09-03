@@ -2,7 +2,6 @@ FROM centos:latest
 MAINTAINER Syed Mohammed
 RUN yum -y update
 RUN yum -y install mysql-server; yum clean all
-ENV DATADIR /var/lib/mysql
 RUN yum install -y MySQL-python
 RUN yum install -y git
 RUN mkdir -p /usr/local/mysqlcontainer/
